@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+//Title goes here
+<title>Title</title>
+// Defining Table descriptions go here
+<script>
+/* Defining Table
+ * Input: 
+ * Processing: 
+ * Output: 
+ */
+//Put functions and function names here
+function functionName() {
+    // Put input and input names here
+    let input = document.getElementById('input name').value;
+
+    // Put output and output names here
+    let output = "Message" + input;
+
+    // Display the output in the div here with div id name
+    document.getElementById('outputDivName').innerHTML = output;
+}
+</script>
+</head>
+
+<body> 
+// Display input message here                           
+Please enter your input: <input type="text" id="input name">    
+// Display button here
+<button type="button" onclick="functionName()">Button Name</button>
+<div id="outputDivName"></div>
+</body>       
+</html>
