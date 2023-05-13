@@ -1,0 +1,52 @@
+h1, p, ol {
+  text-align: center;
+  display: block;
+}
+
+img {
+  width:15%;
+  display: block;
+  margin: 0 auto;
+}
+
+.quote2 {
+  font-size: 30px;
+  display: block;
+  margin: 30px 325px;
+}
+body {
+  background-color: rgb(250, 169, 183);
+}
+
+.quote1 , .quote2, h1 {
+  color: white;
+}
+
+.quote1 {
+  display: block;
+  margin: 30px 200px;
+}
+
+li {
+  text-align: left;
+  margin: 0 auto;
+}
+
+h1:hover {
+  color: black;
+}
+
+.name {
+  display: block;
+  margin: 0 290px;
+
+}
+
+footer {
+  margin: 30px;
+}
+
+div {
+  display: block;
+  margin: 0 30%;
+}

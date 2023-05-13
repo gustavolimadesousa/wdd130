@@ -2,9 +2,11 @@ body {
   
 }
 
-nav {
+nav, footer {
   background-color: steelblue;
   padding: 10px;
+  text-align: center;
+  color: white;
 }
 
 a {
@@ -51,6 +53,12 @@ footer {
   border: 2px solid blue;
 } */
 
-nav, footer {
-  text-align: center;
+footer p {
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+a:hover {
+  background-color: white;
+  color: steelblue;
 }
