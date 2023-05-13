@@ -74,10 +74,12 @@ footer a:hover {
   }
 .home-title {
   color: #333d29;
+  text-align: center;
 }
 
 h4{
-  color: #582F0E;
+  color: #333d29;
+  text-align: center;
 }
 
 .logo, .icon {
