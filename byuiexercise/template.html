@@ -1,35 +1,35 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-//Title goes here
-<title>Title</title>
-// Defining Table descriptions go here
-<script>
-/* Defining Table
- * Input: 
- * Processing: 
- * Output: 
- */
-//Put functions and function names here
-function functionName() {
-    // Put input and input names here
-    let input = document.getElementById('input name').value;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <script>
+        /* Defining Table
+         * Input: A person's name
+         * Processing: Verify the person is not a robot
+         * Output: The verification message
+         */
+        function verifyUser() {
+            // This line prompts the user to type in his name.
+            let name = prompt("Please enter your name to verify you are not a robot");
 
-    // Put output and output names here
-    let output = "Message" + input;
+            // Create a personalized verification for the user.
+            let verification = "Thank you " + name + " you may now enter.";
 
-    // Display the output in the div here with div id name
-    document.getElementById('outputDivName').innerHTML = output;
-}
-</script>
+            // The next line causes the computer to display
+            // a verification to the user in a popup window.
+            alert(verification);
+        }
+    </script>
 </head>
 
-<body> 
-// Display input message here                           
-Please enter your input: <input type="text" id="input name">    
-// Display button here
-<button type="button" onclick="functionName()">Button Name</button>
-<div id="outputDivName"></div>
-</body>       
+<body>
+    <input type="text" id="InputBox">
+    <button type="button" onclick="verifyUser()">Click Here</button>
+    <div id="outputDiv"></div>
+</body>
+
 </html>
