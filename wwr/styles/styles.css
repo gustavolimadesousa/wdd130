@@ -27,6 +27,7 @@ main section {
 
 #background {
   height: 725px;
+  background-color: #c2c5aa
 }
 
 body {
@@ -65,9 +66,7 @@ nav a:hover {
   background-color: #333d29;
   color: #ffffff;
 }
-#background {
-  background-color: #c2c5aa;
-}
+
 .msg {
   background-color: #333d29;
   color: #ffffff;
@@ -153,6 +152,9 @@ footer .social img {
 }
 
 main section img {
-
 box-sizing: border-box;
+}
+
+.mountains {
+  margin: 200px 0;
 }
