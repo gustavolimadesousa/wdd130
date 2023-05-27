@@ -5,34 +5,31 @@
 <title>Rate of Change</title>
 <script>
 
-     /* Defining Table
-      * Input: Current price, previous price.
-      * Processing: Calculate rate of change.
-      * Output: Rate of change.
-      */
-      function computeRateOfChange() {
-       // Read the current price from the user.
-      let currPrice = document.getElementById('currPrice').value;
-      
-      // Read the previous from the user.
-      let prevPrice = document.getElementById('prevPrice').value;
-      
-      // Calculate rate of change.
-      let rateOfChange = (currPrice - prevPrice) / prevPrice;
+function isEven() {
+    // Get the user input from a text field and convert it to a number.
+    var text = document.getElementById('integer').value;
+    var value = parseInt(text);
 
-      // Display the rate of change to the user.
-      document.getElementById('rate').innerHTML = rateOfChange;
-
+    // Choose a message.
+    var message;
+    if ((value % 2) == 0) {
+        message = value + " is an even integer";
+    }
+    else {
+        message = value + " is an odd integer";
     }
 
+    // Display the message to the user.
+    document.getElementById('output').innerHTML = message;
+}
 </script>
 </head>
 
 <body>
-    <h1>Rate of Change</h1>
-    Previous Price <input type="text" id="prevPrice"><br>
-    Current Price <input type="text" id="currPrice"><br>
-    <button type="button" onclick="computeRateOfChange()">Rate of Change</button><br>
-    Rate of Change <div id="rate"></div>
+    <h1>integer</h1>
+  integer <input type="text" id="integer"><br>
+
+    <button type="button" onclick="isEven()">ok</button><br>
+     <div id="output"></div>
 </body>
 </html>

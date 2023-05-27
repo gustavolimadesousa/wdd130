@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foot Wear</title>
+  <script>
+    /* Defining Table
+     * Input: Type of weather.
+     * Processing: Calculate which shoe is best.
+     * Output: Display to user if the best option of shoe to wear.
+     */
+function footwear (){
+  // This box prompts the user to write the type of the weather.
+var text = document.getElementById('footwear').value;
+
+// This variable will show a message according to the user input.
+var message;
+if (text == "hot"){
+  message = "sandals";
+}
+else if (text == "rain") {
+  message = "galoshes";
+}
+else if (text == "snow") {
+  message =  "boots"
+}
+
+else {
+  message = "shoes";
+}
+// Display to the user the best shoe option for the weather indicated.
+document.getElementById("outputDiv").innerHTML = message;
+}
+  </script>
+</head>
+<body>
+  Please enter the type of weather to display the shoe suggestion.
+  <input type="text" id="footwear">
+  <button type="button" onclick="footwear()">Click for Recommendation</button>
+  <div id="outputDiv"></div>
+</body>
+</html>

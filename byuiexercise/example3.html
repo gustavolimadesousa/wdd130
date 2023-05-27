@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Math Quiz</title>
+        <script>
+            /* Input: First Number, Arithmetic Operator, Second Number
+             * Processing: Calculate answer to equation
+             * Output: Answer to user's equation
+             */
+            function quiz() {
+                // Get numbers and arithmetic operator from user
+                let number1 = parseFloat(document.getElementById("firstNumberInputBox").value);
+                let operator = document.getElementById("arithmeticOperatorInputBox").value;
+                let number2 = parseFloat(document.getElementById("secondNumberInputBox").value);
+                let firstAnswer = parseFloat(document.getElementById("answerInputBox").value);
+                // Calculate equation and check with user's answer
+                let secondAnswer;  
+                if (operator == "+"){
+                    secondAnswer = number1 + number2;
+                }
+                else if (operator == "-"){
+                    secondAnswer = number1 - number2;
+                }
+                else if (operator == "*") {
+                    secondAnswer = number1 * number2;
+                }
+                else if (operator == "/") {
+                    secondAnswer = number1 / number2
+                }
+                else if (operator != "none"){
+                    secondAnswer = "Missing Componet";
+                }
+                    if (firstAnswer == secondAnswer){
+                    document.getElementById("outputDiv").innerHTML = "Correct! Good job";
+                    }
+                    else {
+                    document.getElementById("outputDiv").innerHTML = "Incorrect. Try again!";
+                    }  
+                }
+           
+           
+        </script>
+    </head>
+    <body>
+        <b>Type in your own equation and solve it,
+        click the "Check" button to see if you're right!</b><br>
+        First Number:<input type="text" id="firstNumberInputBox" placeholder="12,1.2,17.5">
+        Operator:<input type="text" id="arithmeticOperatorInputBox" placeholder="+,-,*,or /">
+        Second Number:<input type="text" id="secondNumberInputBox" placeholder="12,1.2,17.5">
+        <br><b>=</b>Answer:<input type="text" id="answerInputBox" placeholder="12,1.2,17.5">
+        <button type= "button" onclick="quiz()">Check</button>
+        <div id="outputDiv"></div>
+    </body>
+</html>

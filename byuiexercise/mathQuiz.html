@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Your Math Skills</title>
+  <script>
+    /* Defining Table
+     * Input: 2 numbers, an operator, and a result.
+     * Processing: Check the equation according to the operator.
+     * Output: Display to user if the eauation is correct or not.
+     */
+
+    function mathCheck() {
+      // This box prompts the user to type the first number. 
+      var firstNumber = parseFloat(document.getElementById("inputBox1").value);
+
+      // This box prompts the user to type the operator. 
+      var sign = document.getElementById("inputBoxSign").value;
+
+      // This box prompts the user to type the second number. 
+      var secondNumber = parseFloat(document.getElementById("inputBox2").value);
+
+      // This box prompts the user to type the result. 
+      var resultNumber = parseFloat(document.getElementById("inputBoxResult").value);
+
+      // Compute the result to compare with the users' input.
+      var result;
+
+      // This variable will show one of two answers according to the computation.
+      var correct;
+
+      if (sign == "+") {
+        result = firstNumber + secondNumber;
+      }
+      else if (sign == "-") {
+        result = firstNumber - secondNumber;
+      } if (sign == "*") {
+        result = firstNumber * secondNumber;
+      } if (sign == "/") {
+        result = firstNumber / secondNumber;
+      }
+
+      if (result == resultNumber) {
+        correct = "Correct! Good job!";
+      }
+      else {
+        correct = "Incorrect. Try again!"
+      }
+      
+      // Tell the user if the math equation is correct or not.
+      document.getElementById("outputDiv").innerHTML = correct;
+
+    }
+
+  </script>
+</head>
+
+<body>
+  <h1>Check Your Math Skills</h1>
+
+
+  <input type="text" id="inputBox1" size="1">
+  <input type="text" id="inputBoxSign" size="1">
+  <input type="text" id="inputBox2" size="1"> =
+  <input type="text" id="inputBoxResult" size="1">
+  <button type="button" onclick="mathCheck()">Check Answer</button>
+  <div id="outputDiv"></div>
+
+</body>
+
+</html>
