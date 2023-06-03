@@ -4,42 +4,38 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shoes For Your Weather!</title>
-
+<title>Sleep In or Nah?</title>
 <script>
 /*Defining Table
-*Input: weather
-*Processing: the type of shoes depending on the weather
-*Output: the type of shoes
+*Input: all input comes from the computer's clock, weekdays, weekends, holidays. etc.
+*Processing: wether you can sleep in or not
+*Output: wether you can sleep in or not
 */
 
-function whichFootwear () {
-//Get the user input form a text field.
-var text = document.getElementById('inputBox').value;
+//Define variables.
+var now = new Date();
+var month = now.getMonth();
+var dayOfMonth = now.getDate();
+var dayOfWeek = now.getDay();
+let message;
 
-//Choose a message.
-var message;
-if (text == "hot") {
-message = "sandals";
+
+//function
+function sleepInGetUp(){
+if (((dayOfMonth==1||dayOfMonth==4||dayOfMonth==25) && (month==4||month==6||month==11))||(dayOfWeek = 0||dayOfWeek==6)){
+message = "Sleep In Foo!"
+} else {
+message = "Get Up Foo!"
 }
-else if (text == "rain") {
-message = "galoshes";
+//Display function to user.
+document.getElementById("message").innerHTML = message;
 }
-else if (text == "snow") {
-message = "boots";
-}
-else {
-message = "shoes";
-}
-//Display the message to the user.
-document.getElementById('output').innerHTML = message;
-}
+
 
 </script>
 </head>
 <body>
-Please enter your weather: <input type="text" id="inputBox">
-<button type="button" onclick="whichFootwear()">Which Footwear?</button>
-<div id="output"></div>
+<button type="button" onclick="sleepInGetUp()">To Sleep Or Not To Sleep?</button>
+<div id="message"></div>
 </body>
 </html>

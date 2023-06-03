@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm</title>
+  <script>
+    /* 
+    Defining Table
+
+    Needs: 
+    Find out if I can sleep in or not.
+    Get input from the computer's clock.
+
+    Program:
+    All weekdays besides holidays show message "Get up!"
+    All other days (weekends and holidays) show message "Sleep in."
+    Holidays are January 1, July 4, and December 25.
+
+    */
+   function checkSleep() {
+    // Initial variables
+    var now = new Date();
+    var month = now.getMonth();
+    var dayOfMonth = now.getDate();
+    var dayOfWeek = now.getDay();
+
+    // Conditions
+    if (dayOfWeek == 0 || dayOfWeek == 6 || dayOfMonth == 1 && month == 0 || dayOfMonth == 4 && month == 6 || dayOfMonth == 25 && month == 11) {
+      var sleep = "Sleep in."
+    }
+    else {
+      var sleep = "Get up!"
+    }
+
+    // display result to the user
+    document.getElementById("outputDiv").innerHTML = sleep;
+
+   }
+  </script>
+</head>
+
+<body>
+ <h3>Click the button to check if you can sleep in today.</h3> 
+<button type="button" onclick="checkSleep()">Check</button>
+<div id="outputDiv" style="color:blue; margin-top: 20px;"></div>
+</body>
+
+</html>

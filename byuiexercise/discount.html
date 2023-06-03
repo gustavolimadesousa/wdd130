@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount</title>
+  <script>
+    /* 
+    Defining Table
+    
+    Needs: 
+    Increase sales Tuesday and Wednesday.
+    Get customer subtotal as input.
+    Add sales taxes.
+    
+    Program:
+    If subtotal is > $50 on Tusday or Wednesday = discount -10%.
+    Add sales taxes of 6% to the subtotal. 
+    Subtotal - discount 10% (if available) + sales taxes 6% = new total. 
+    
+    */
+
+    function discount() {
+
+      // Inital variables
+      var subtotal = parseFloat(document.getElementById("inputValue").value);
+      var total;
+      var discount;
+      var salesTaxes = 1.06;
+
+      // Get the day of the week
+      var dayOfWeek = new Date().getDay();
+      if (subtotal > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
+        discount = 1 - .10;
+      }
+      else {
+        discount = 1;
+      }
+
+      // New total
+      total = subtotal * discount * salesTaxes
+
+      // Display the result to the user
+      document.getElementById("outputDiv").innerHTML = "Price after discount and taxes: $" + total;
+
+    }
+
+  </script>
+</head>
+
+<body>
+  Please enter the subtotal:
+  <input type="text" id="inputValue" size="2">
+  <button type="button" onclick="discount ()">Compute Total</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>
