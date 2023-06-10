@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sum Odds</title>
+  <script>
+    /* Defining Table
+     * Input: The user will add a number.
+     * Processing: Sum all the odd integers between 1 and the user's input.
+     * Output: Display to the user the result of the sum.
+     */
+
+function sumOdds (){
+// Variables
+var inputNumber = parseInt(document.getElementById('integer').value);
+var result = 0;
+var oddNumber = 1;
+
+// Find the odd numbers from 1 to the users input and add all the odd numbers to the result.
+for (; oddNumber <= inputNumber; oddNumber++){
+  if (oddNumber % 2 !=0 ) {
+    result= oddNumber + result;
+  }
+}
+
+// Display to the user the sum of odd intergers.
+document.getElementById("outputDiv").innerHTML = result;
+}
+  </script>
+</head>
+<body>
+  Please enter a number to get the sum of all odd integers:
+  <input type="text" id="integer">
+  <button type="button" onclick="sumOdds()">See result</button>
+  <div id="outputDiv"></div>
+</body>
+</html>
