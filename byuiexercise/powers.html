@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="favicon icon" href="#">
+  <title>Five Times table</title>
+  <script>
+    /* Defining Table
+     * Processing: create a power table with the first 32 of 2.
+     * Output: Display the table to the user.
+     */
+
+    function powers() {
+      const base = 2;
+      const maxNumber = 31;
+      let counter = 0;
+      let table = "" ;
+      let line;
+      
+      // Check the numbers and create a table.
+
+      while (counter <= maxNumber) {
+        line = Math.pow(base, counter)
+        table += line + "<br>";
+        counter += 1;
+      }
+
+      // Display the table to the user
+      document.getElementById('outputDiv').innerHTML = table;
+    }
+  </script>
+</head>
+
+<body>
+  Click to see the first 32 powers of 2.
+  <button type="button" onclick="powers()">See table</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Checking Numbers</title>
+<script>
+/* Input: Two numbers from the input fields.    
+ * Processing: Determine if the sum of the two numbers is greater than 20, or if each number is greater than 5.
+ * Output: Display "true" to the user if the sum of the two numbers is greater than 20, or if both numbers is greater than 5, if not display "False".
+ */
+ function checkNumbers() {
+var numberOne = parseFloat(document.getElementById('one').value);
+var numberTwo = parseFloat(document.getElementById('two').value);
+var sum = numberOne + numberTwo;
+
+if (sum > 20 || numberOne > 5 && numberTwo > 5) {
+    document.getElementById('output').innerHTML = "True" ;
+} else {
+    document.getElementById('output').innerHTML = "False" ;
+}
+}
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="checkNumbers()">Click</button>
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="favicon icon" href="#">
+  <title>Five Times table</title>
+  <script>
+    /* Defining Table
+     * Input: The user will add a number.
+     * Processing: Sum all the odd integers between 1 and the user's input.
+     * Output: Display to the user the result of the sum.
+     */
+
+    // program to generate a multiplication table
+
+    // take input from the user
+    function mathTable(){
+    const number = 5;
+
+    //creating a multiplication table
+    for (let i = 1; i <= 12; i++) {
+
+      // multiply i with number
+      let result = i * number;
+      let table = `${number} * ${i} = ${result}`
+      // display the result
+      document.getElementById("outputDiv").innerHTML = table;
+    }}
+  </script>
+</head>
+
+<body>
+  Click to see the 5 times table.
+  <button type="button" onclick="mathTable()">See table</button>
+  <div id="outputDiv"></div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Title</title>
+<script>
+/* Input: 3 numbers collected by the input field. A start number, an end number, and a divisor.
+ * Processing:Find all the numbers between the start and end that are divisible buy the divisor insered by the user.
+ * Output: Display to the user all numbers divisible between the start and end numbers. 
+ */
+ function divisible() {
+var start = parseInt(document.getElementById('start').value);
+var end = parseInt(document.getElementById('end').value);
+var divisor = parseInt(document.getElementById('divisor').value);
+var counter = start;
+var output = "";
+
+while (counter <= end) {
+    if ((counter % divisor) == 0) {
+        output = output + counter  + " "
+    }
+    counter++
+}
+document.getElementById('output').innerHTML = output ;
+}
+</script>
+</head>
+
+<body>
+Start: <input type="text" id="start" size="5"><br>
+End: <input type="text" id="end" size="5"><br>
+Divisor: <input type="text" id="divisor" size="5"><br>
+<button type="button" onclick="divisible()">Click</button>
+<div id="output"></div>
+</body>
+</html>

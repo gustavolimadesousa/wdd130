@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="favicon icon" href="#">
+  <title>Five Times table</title>
+  <script>
+    /* Defining Table
+     * Processing: create a five times table from 1 to 12.
+     * Output: Display the table to the user.
+     */
+
+function mathTable(){
+const multiplier = 5;
+const maxNumber = 12;
+let counter = 1;
+let table = "";
+let line;
+
+// Check the numbers and create a table
+while (counter <= maxNumber){
+  line = multiplier + ' x ' + counter + ' = ' + multiplier * counter;
+  table += line + '<br>';
+  counter += 1;
+}
+
+// Display the table to the user.
+document.getElementById("outputDiv").innerHTML = table;
+}
+  </script>
+</head>
+<body>
+ Click to see the 5 times table. 
+  <button type="button" onclick="mathTable()">See table</button>
+  <div id="outputDiv"></div>
+</body>
+</html>

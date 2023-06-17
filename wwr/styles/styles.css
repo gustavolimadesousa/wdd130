@@ -137,9 +137,10 @@ footer a:hover {
   color: #ffffff;
   text-align: center;
   font-family: "Bruno Ace SC", Poppins, Arial, Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: 3em;
   margin-top: 30px;
   margin-bottom: -10px;
+  text-shadow: 3px 3px 3px #333d29;
 }
 
 h4 {
@@ -264,6 +265,97 @@ main section img {
   transform: scale(1.1);
 }
 
+/* start of css of FAQ page */
+
+#faq {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin-top: -290px;
+}
+
+#faq-img {
+  width: 100%;
+}
+
+#faq-box {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  z-index: -1;
+}
+
+#faq-msg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 850px;
+}
+
+#faq-msg h1 {
+  text-align: center;
+}
+
+.faq-title {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Bruno Ace SC", Poppins, Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  margin-top: 30px;
+  margin-bottom: -10px;
+  text-shadow: 3px 3px 3px #333d29;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #333d29;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 20px;
+}
+
+.active,
+.accordion:hover {
+  background-color: #333d29;
+  color: #ffffff;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.accordion:after {
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.question-grid {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+}
+
+.question-subtitle {
+  font-size: 25px;
+  text-align: center;
+  color: #333d29;
+  padding: 20px 20px;
+}
+
 @media screen and (max-width: 900px) {
   #hero,
   .home-grid {
@@ -302,8 +394,9 @@ main section img {
   }
 
   .home-title {
-    font-size: 25px;
+    font-size: 30px;
     color: #6f7364;
+    text-shadow: 1px 1px 1px #333d29;
   }
   .rivers-card,
   .camping-card,
@@ -322,5 +415,38 @@ main section img {
   }
   footer {
     margin-top: 25px;
+  }
+
+  /* FAQ page @media screen */
+
+  .faq-grid {
+    display: block;
+    height: 0px;
+  }
+
+  #faq {
+    margin-top: 0px;
+  }
+
+  #faq-msg {
+    margin-top: 500px;
+  }
+
+  .faq-title {
+    font-size: 30px;
+    color: #333d29;
+    text-shadow: 1px 1px 1px #333d29;
+  }
+
+  .question-grid {
+    padding-top: -300px;
+  }
+
+  .accordion {
+    font-size: 15px;
+  }
+
+  .panel {
+    font-size: 15px;
   }
 }
