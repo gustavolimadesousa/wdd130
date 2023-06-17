@@ -450,4 +450,10 @@ main section img {
   .panel {
     font-size: 15px;
   }
+
+  .accordion:after {
+    display: none;
+  }
 }
+
+
