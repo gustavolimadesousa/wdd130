@@ -419,9 +419,10 @@ main section img {
 
   /* FAQ page @media screen */
 
+  #faq,
   .faq-grid {
     display: block;
-    height: 0px;
+    height: auto;
   }
 
   #faq {
@@ -429,7 +430,7 @@ main section img {
   }
 
   #faq-msg {
-    margin-top: 500px;
+    margin-top: 0px;
   }
 
   .faq-title {
