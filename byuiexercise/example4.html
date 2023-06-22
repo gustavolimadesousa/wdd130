@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Wind Chill Calculator</title>
+        <script>
+            /*
+            Input: get a temperature and speed from two text fields.
+            Processing: use function doInputOutput(), function windChill(tempF, speed) and f = 35.74 + 0.6215 t - 35.75 s0.16 + 0.4275 t s0.16
+            to calculate the wind speed
+            Outout:Display the result to the user
+            */
+            function doInputOutput(){
+                let tempF = parseFloat(document.getElementById("temperature").value);
+                let speed = parseFloat(document.getElementById("speed").value);
+
+                var result = windChill(tempF, speed);
+                document.getElementById("outputDiv").innerHTML = result;
+            }
+   
+            function windChill(tempF, speed){
+                let t = tempF;
+                let s = speed;
+                let windChill = 35.74 + 0.6215 * t - 35.75  * Math.pow(s,0.16) + 0.4275 * t * Math.pow(s,0.16);
+                return windChill;
+   
+            }
+           
+        </script>
+    </head>
+
+   
+
+    <body>
+        <h2>Wind Chill Calculator</h2>
+        Temperature:<input type="text" id="temperature"><br>
+        Speed:<input type="text" id="speed"><br>
+        <button type="button" onclick="doInputOutput()">Calculate</button>
+        <div id="outputDiv"></div>
+    </body>
+
+
+</html>
