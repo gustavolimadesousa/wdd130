@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <title>Wind Chill Calculator</title>
-        <script>
-            /*
-            Input: get a temperature and speed from two text fields.
-            Processing: use function doInputOutput(), function windChill(tempF, speed) and f = 35.74 + 0.6215 t - 35.75 s0.16 + 0.4275 t s0.16
-            to calculate the wind speed
-            Outout:Display the result to the user
-            */
-            function doInputOutput(){
-                let tempF = parseFloat(document.getElementById("temperature").value);
-                let speed = parseFloat(document.getElementById("speed").value);
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invest!</title>
+</head>
+<script>
+/*Defining Table
+*Input:
+*Processing:
+*Output:
+*/
 
-                var result = windChill(tempF, speed);
-                document.getElementById("outputDiv").innerHTML = result;
-            }
-   
-            function windChill(tempF, speed){
-                let t = tempF;
-                let s = speed;
-                let windChill = 35.74 + 0.6215 * t - 35.75  * Math.pow(s,0.16) + 0.4275 * t * Math.pow(s,0.16);
-                return windChill;
-   
-            }
-           
-        </script>
-    </head>
+function doFV(){
+let principal = document.getElementById("investInput").value;
+let annualRate = document.getElementById("rateInput").value;
+let years = document.getElementById("numberInput").value;
+let periodsPerYear = document.getElementById("periodInput").value;
+let result = computeFutureValue(principal, annualRate, years, periodsPerYear);
+document.getElementById("computeFutureValueoutput").innerHTML = result;
+}
 
-   
+function computeFutureValue(principal, annualRate, years, periodsPerYear){
+let futurevalue = principal * (1 + (annualRate * periodsPerYear)) ** periodsPerYear;
+return futurevalue.toFixed(2);
+}
 
-    <body>
-        <h2>Wind Chill Calculator</h2>
-        Temperature:<input type="text" id="temperature"><br>
-        Speed:<input type="text" id="speed"><br>
-        <button type="button" onclick="doInputOutput()">Calculate</button>
-        <div id="outputDiv"></div>
-    </body>
-
-
+</script>
+<body>
+Amount Invested: <input type="text" id="investInput"> <br>
+<br>
+Annual Rate (ex: .08): <input type="text" id="rateInput"> <br>
+<br>
+Number of years: <input type="text" id="numberInput"> <br>
+<br>
+Periods per year: <input type="text" id="periodInput"> <br>
+<br>
+<button type="button" onclick="doFV()">calculate</button> <br>
+<br>
+<div id="computeFutureValueoutput"></div>
+</body>
 </html>
