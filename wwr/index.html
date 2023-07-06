@@ -10,7 +10,9 @@
 </head>
 
 <body>
-  <div id="content">
+
+<div id="content">
+  
     <header>
       <a id="logo_link" href="index.html">
         <img src="images/logo6_200.png" alt="Dry Oar Logo" class="logo">
@@ -68,9 +70,12 @@
         <p>Enjoy the breathtaking scenery. From valleys, meadows, canyons, and high peaks; it's way more than just the rapids. It's a great way to get away from it all and relax amongst all the beauty of the great outdoors. </p>
         <a class="join" href="rivers.html">Join Us</a>
       </section>
+      
     </main>
 
     <footer>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
       <p>Dry Oar &copy; 2023 - Gustavo Sousa</p>
       <p><a href="site-plan-rafting.html">Site Plan</a></p>
       <p><a href="contactus.html">Contact Us</a></p>
@@ -90,6 +95,29 @@
 
     </footer>
   </div>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+
 </body>
 
 </html>

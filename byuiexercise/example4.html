@@ -1,43 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-us">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Invest!</title>
+<meta charset="utf-8">
+<meta name="author" content="Maxim Person">
+<title>Array1</title>
 </head>
-<script>
-/*Defining Table
-*Input:
-*Processing:
-*Output:
-*/
-
-function doFV(){
-let principal = document.getElementById("investInput").value;
-let annualRate = document.getElementById("rateInput").value;
-let years = document.getElementById("numberInput").value;
-let periodsPerYear = document.getElementById("periodInput").value;
-let result = computeFutureValue(principal, annualRate, years, periodsPerYear);
-document.getElementById("computeFutureValueoutput").innerHTML = result;
-}
-
-function computeFutureValue(principal, annualRate, years, periodsPerYear){
-let futurevalue = principal * (1 + (annualRate * periodsPerYear)) ** periodsPerYear;
-return futurevalue.toFixed(2);
-}
-
-</script>
+<style>
+    body {
+        background-color: gold;
+    }
+    p {
+        color: gold;
+    }
+    button {
+        background-color: red;
+        color: gold;
+    }
+</style>
 <body>
-Amount Invested: <input type="text" id="investInput"> <br>
-<br>
-Annual Rate (ex: .08): <input type="text" id="rateInput"> <br>
-<br>
-Number of years: <input type="text" id="numberInput"> <br>
-<br>
-Periods per year: <input type="text" id="periodInput"> <br>
-<br>
-<button type="button" onclick="doFV()">calculate</button> <br>
-<br>
-<div id="computeFutureValueoutput"></div>
+    <script>
+        function addEnds(list) {
+            return list[0] + list[list.length - 1];
+        }
+        function getMiddle(list) {
+            let middleIndex = Math.floor(list.length / 2);
+            if (list.length % 2 === 0) {
+                return (list[middleIndex - 1] + list[middleIndex]) / 2;
+            } else {
+                return list[middleIndex];
+            }
+        }
+/* Defining Table
+ * Input: no user input
+ * Processing: Test the addEnds and getMiddle functions by calling them.
+ * Output: The values returned from the addEnds and getMiddle functions.
+ */
+        function test() {
+            let list1 = [ 17, 8, 9, 5, 20 ];
+            let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+// Test the addEnds function by calling it two times.
+            let sum1 = addEnds(list1);
+            let sum2 = addEnds(list2);
+// Test the getMiddle function by calling it two times.
+            let mid1 = getMiddle(list1);
+            let mid2 = getMiddle(list2);
+// Build a string to display to the user.
+            let output =
+                    sum1 + '<br>' +
+                    sum2 + '<br>' +
+                    mid1 + '<br>' +
+                    mid2;
+// Display the output string for the user to see.
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+</body>
+<body>
+<button onclick="test()">Click me</button>
+<div id="output"></div>
 </body>
 </html>
