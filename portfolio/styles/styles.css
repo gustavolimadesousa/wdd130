@@ -2,7 +2,7 @@
 
 #content {
   margin: 0 auto;
- max-width: 2000px;
+  max-width: 2000px;
 }
 
 nav a {
@@ -40,7 +40,6 @@ header {
   background-color: #e2e2e2;
   display: grid;
   grid-template-columns: 150px auto;
-
 }
 
 nav {
@@ -87,8 +86,7 @@ nav a:hover {
 }
 #home-img {
   width: 800px;
-  height: 700px
-  ;
+  height: 700px;
 }
 
 main h4,
@@ -123,12 +121,62 @@ footer a {
   text-decoration: none;
 }
 
-.img-social{
-border-radius: 50px;
-
+.img-social {
+  border-radius: 50px;
 }
 footer a:hover {
   color: #ffffff;
+}
+
+/* Second page css */
+#aboutme {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 2fr 2fr;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+#aboutme-img1 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  margin-left: 4em;
+}
+
+#aboutme-img2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  margin-right: 4em;
+  margin-bottom: 2em;
+}
+
+#aboutme-text1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+}
+
+#aboutme-text2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+}
+
+.aboutme-title {
+  font-family: Lato, Poppins, Arial, Helvetica, sans-serif;
+  font-size: 3.54em;
+  font-weight: 100;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+}
+
+#text-part1,
+#text-part2 {
+  font-family: Lato, Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
 }
 
 @media screen and (max-width: 900px) {
@@ -142,7 +190,6 @@ footer a:hover {
     width: 110px;
     height: 30px;
     margin-top: 55px;
-    
   }
   nav,
   footer {
@@ -199,5 +246,23 @@ footer a:hover {
 
   footer {
     margin-top: 0px;
+  }
+
+  #aboutme {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
+  #aboutme-img1 {
+    margin-top: 2em;
+    width: 10em;
+    height: 15em;
+  }
+
+  #aboutme-img2 {
+    margin-top: 1em;
+    width: 10em;
+    height: 15em;
   }
 }
