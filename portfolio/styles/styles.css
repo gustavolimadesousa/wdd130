@@ -179,6 +179,101 @@ footer a:hover {
   font-size: 1.1em;
 }
 
+/* Third page css */
+#professional-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+#professional-title {
+  display: inline;
+  font-family: Lato, Poppins, Arial, Helvetica, sans-serif;
+  font-size: 3.54em;
+  font-weight: 100;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+}
+
+#professional-text1 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+#professional-text2 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+#professional-text3 {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+#professional-text1,
+#professional-text2,
+#professional-text3 {
+  font-family: Lato, Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-left: 1.5em;
+  margin: 0 0;
+}
+
+#professional-text1 h2,
+#professional-text2 h2,
+#professional-text3 h2 {
+  margin-top: 2em;
+  padding-top: 0;
+  border-top: 0;
+  padding: 0;
+  border: 0;
+  font-family: Lato, Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+
+#professional-text1 h5,
+#professional-text2 h5,
+#professional-text3 h5 {
+margin-bottom: auto;
+  font-family: Lato, Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-align: left;
+  font-style: italic;
+}
+
+#professional-img1 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  display: flex;
+  margin: auto 0;
+  border-radius: 4px;
+}
+
+#professional-img2 {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  display: flex;
+  margin: auto 0;
+  border-radius: 4px;
+}
+
+#professional-img3 {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  display: flex;
+  margin: auto 0;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 900px) {
   #home,
   .home-grid {
@@ -267,4 +362,35 @@ footer a:hover {
     width: 15em;
     height: 25em;
   }
+
+  #professional-img1 {
+    margin: 1em auto;
+      width: 15em;
+      height: 25em;
+    
+    }
+    #professional-grid {
+      display: block;
+      margin: 0 auto;
+      max-width: 80%;
+    }
+    
+    #professional-img2 {
+    display: none;
+      
+      }
+      #professional-img3 {
+     display: none;
+        }
+    
+        #professional-text3 {
+          margin-bottom: 3em;
+        }
+    
+
+
+
 }
+
+
+

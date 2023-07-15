@@ -1,62 +1,66 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="author" content="Maxim Person">
-<title>Array1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 </head>
-<style>
-    body {
-        background-color: gold;
-    }
-    p {
-        color: gold;
-    }
-    button {
-        background-color: red;
-        color: gold;
-    }
-</style>
-<body>
-    <script>
-        function addEnds(list) {
-            return list[0] + list[list.length - 1];
-        }
-        function getMiddle(list) {
-            let middleIndex = Math.floor(list.length / 2);
-            if (list.length % 2 === 0) {
-                return (list[middleIndex - 1] + list[middleIndex]) / 2;
-            } else {
-                return list[middleIndex];
-            }
-        }
+<script defer>
 /* Defining Table
- * Input: no user input
- * Processing: Test the addEnds and getMiddle functions by calling them.
- * Output: The values returned from the addEnds and getMiddle functions.
- */
-        function test() {
-            let list1 = [ 17, 8, 9, 5, 20 ];
-            let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
-// Test the addEnds function by calling it two times.
-            let sum1 = addEnds(list1);
-            let sum2 = addEnds(list2);
-// Test the getMiddle function by calling it two times.
-            let mid1 = getMiddle(list1);
-            let mid2 = getMiddle(list2);
+* Input: no user input
+* Processing: Test the countEvens and multiply functions by calling them.
+* Output: The values returned from the countEvens and multiply functions.
+*/
+function test() {
+let list1 = [ 17, 8, 9, 5, 20 ];
+let list2 = [ 12, 4, 8, 15, 17, 5, 20, 11 ];
+
+// Test the countEvens function by calling it two times.
+let count1 = countEvens(list1);
+let count2 = countEvens(list2);
+
+// Test the multiply function by calling it two times.
+let mult1 = multiply(list1,3);
+let mult2 = multiply(list2,2);
+
 // Build a string to display to the user.
-            let output =
-                    sum1 + '<br>' +
-                    sum2 + '<br>' +
-                    mid1 + '<br>' +
-                    mid2;
+let output =
+count1 + ' <br>' +
+count2 + '<br>' +
+mult1 + '<br>' +
+mult2;
+
 // Display the output string for the user to see.
-            document.getElementById('output').innerHTML = output;
-        }
-    </script>
-</body>
+document.getElementById('output').innerHTML = output;
+}
+
+function countEvens(list)
+{
+let evens = []
+for(const i in list)
+{
+if(list[i] % 2 === 0)
+{
+evens.push(list[i])
+}
+}
+return evens;
+}
+
+function multiply(list, multiplier)
+{
+let multiplied = []
+for(const i in list)
+{
+list[i] = list[i] * multiplier
+multiplied.push(list[i])
+}
+return multiplied;
+}
+</script>
 <body>
-<button onclick="test()">Click me</button>
+
+<input type = "button" onclick = "test()" value="Display">
 <div id="output"></div>
 </body>
 </html>
