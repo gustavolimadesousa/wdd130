@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Name</title>
+</head>
+
+<body>
+  <script>
+
+
+    function makeFullName(givenName, familyName) {
+
+      let givenName = document.getElementById("givenName").value;
+
+      let familyName = document.getElementById("familyName").value;
+
+      let fullName = `${familyName}, ${givenName}`;
+
+    }
+
+    document.getElementById("outputDiv").innerHTML = fullName;
+  </script>
+
+  <input type="text" id="givenName">
+  <input type="text" id="familyName">
+  <button type="button" onclick="makeFullName()">Display Result</button>
+  <div id="outputDiv"></div>
+
+</body>
+
+</html>
